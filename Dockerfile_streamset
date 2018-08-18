@@ -1,0 +1,5 @@
+FROM  streamsets/datacollector
+
+
+RUN mv -r  /data/streamsets-datacollector-apache-kafka_0_10-lib $SDC_HOME/streamsets-libs/streamsets-datacollector-apache-kafka_0_10-lib
+
