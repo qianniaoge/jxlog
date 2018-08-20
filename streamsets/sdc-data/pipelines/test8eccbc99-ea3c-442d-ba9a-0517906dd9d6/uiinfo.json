@@ -1,0 +1,63 @@
+{
+  "SendtoOriginResponse_01" : {
+    "description" : "",
+    "label" : "Send POST Response",
+    "xPos" : 949.5234985351562,
+    "yPos" : 153.14234924316406,
+    "stageType" : "TARGET"
+  },
+  "SendtoOriginResponse_02" : {
+    "description" : "",
+    "label" : "Send GET Response",
+    "xPos" : 1133.660888671875,
+    "yPos" : 51.670692443847656,
+    "stageType" : "TARGET"
+  },
+  "ExpressionEvaluator_01" : {
+    "description" : "",
+    "label" : "Evaluate GET Request",
+    "xPos" : 523.1988525390625,
+    "yPos" : -30.05701446533203,
+    "stageType" : "PROCESSOR"
+  },
+  "ExpressionEvaluator_02" : {
+    "description" : "",
+    "label" : "Evaluate POST Request",
+    "xPos" : 573.7561645507812,
+    "yPos" : 129.76809692382812,
+    "stageType" : "PROCESSOR"
+  },
+  ":pipeline:" : {
+    "previewConfig" : {
+      "previewSource" : "TEST_ORIGIN",
+      "batchSize" : 10,
+      "timeout" : 30000,
+      "writeToDestinations" : true,
+      "executeLifecycleEvents" : false,
+      "showHeader" : true,
+      "showFieldType" : true,
+      "rememberMe" : false
+    }
+  },
+  "StreamSelector_01" : {
+    "description" : "",
+    "label" : "HTTP Request Router",
+    "xPos" : 269.6104736328125,
+    "yPos" : 197.24623107910156,
+    "stageType" : "PROCESSOR"
+  },
+  "SendtoOriginResponse_03" : {
+    "description" : "",
+    "label" : "Bad Request 400",
+    "xPos" : 500,
+    "yPos" : 300,
+    "stageType" : "TARGET"
+  },
+  "RESTService_01" : {
+    "description" : "",
+    "label" : "REST Service 1",
+    "xPos" : 60,
+    "yPos" : 50,
+    "stageType" : "SOURCE"
+  }
+}
