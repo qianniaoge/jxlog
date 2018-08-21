@@ -17,7 +17,7 @@ services:
       - $PWD/streamsets/conf/sdc.properties:/etc/sdc/sdc.properties:ro
       - $PWD/streamsets/sdc-data:/data:rw
   clickhouse: 
-    build: ./clickhouse
+    image: yandex/clickhouse-server
     ports:
       - "9000:9000"
       - "8123:8123"
